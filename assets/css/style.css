@@ -4,18 +4,21 @@ body {
 }
 
 .cabecalho {
-    font-weight: 600;
-    background: #E0E0E0;
+    width: 100%;
     height: 80px;
+    font-weight: 600;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #E0E0E0;
 }
 
 .controle-financeiro {
     font-size: 20px;
     display: flex;
     align-items: center;
-    margin-left: 200px;
+    margin-left: 10px;
 }
 .controle-financeiro #texto-controle-financeiro {
     margin-left: 10px;
@@ -52,34 +55,3 @@ body {
     
 }
 
-.nova-transacao {
-    height: 344px;
-    width: 400px;
-    margin-top: 110px;
-    margin-left: 200px;
-    border: 1px solid #979797;
-    border-radius: 4px;
-}
-
-.nova-transacao #nova-transacao {
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.tipo-de-transacao {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-left: 4%;
-    margin-right: 4%;
-    margin-top: 6%;
-    margin-bottom: 65%;
-}
-.tipo-de-transacao #compra-venda {
-    height: 32px;
-    width: 100%;
-    border: 1px solid #979797;
-    border-radius: 4px;
-    color: #979797;
-}
