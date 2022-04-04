@@ -4,10 +4,11 @@
         <title>Meu projeto individual</title>
         <meta name= "Author" content= "Eliel">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/css/transacao.css">
         <link rel="stylesheet" href="./assets/css/extrato.css">
-        <link rel="stylesheet" href="./assets/css/styleform.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -30,8 +31,34 @@
                 </ul>
             </div>
         </header>
-        <div class="corpo-do-site">
-
-        </div>
+        <section class="corpo-do-site">
+            <form class="acoes">
+                <div class="nova-transacao">
+                    <h1 class="titulo-transacao">Nova transação</h1>
+                    <div class="formulario">
+                        <div class="campo-compra-venda">
+                            <h4 class="transacao">Transação</h4>
+                            <select required id="compra-venda">
+                                <option value="Compra">Compra</option>
+                                <option value="Venda">Venda</option>
+                              </select>
+                        </div>
+                        <div class="nome">
+                            <h4 class="titulo-nome">Nome da mercadoria</h4>
+                            <input required id="inpt-nome" type="text" placeholder="Nome">
+                        </div>
+                        <div class="valor">
+                            <h4 class="titulo-valor">Valor</h4>
+                            <input required id="inpt-valor" type="text" placeholder="R$ 0,00">
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <input type="submit" class="botao" value="Adicionar transação">
+              
+                      </div>
+                </div>
+                <div class="extrato"></div>
+            </form>
+        </section>
     </body>
 </html>
