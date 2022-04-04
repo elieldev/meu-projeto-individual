@@ -1,0 +1,39 @@
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+.extrato {
+    width: 50%;
+}
+.titulo-extrato {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+}
+td {
+    border-bottom: solid #979797 1px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 25px;
+    color: #000000;
+    white-space: nowrap;
+}
+.extrato-mercadoria {
+    font-weight: 700;
+    padding-left: 22px;
+    padding-top: 2px;
+}
+.extrato-valor {
+    font-weight: 700;
+    padding-right: 22px;
+    text-align: start;
+}
+.extrato-transacoes {
+    border: none;
+    text-align: center;
+    width: 100%;
+    padding-left: 60px;
+}
+h2 {
+    text-align: center;
+}

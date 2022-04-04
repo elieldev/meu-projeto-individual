@@ -78,9 +78,3 @@
     border-radius: 4px;
     cursor: pointer;
 }
-@media (max-width: 768px)
-.nova-transacao {
-    display: block;
-    flex-direction: row;
-    width: 90%;
-}
