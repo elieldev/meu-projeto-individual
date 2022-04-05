@@ -9,28 +9,37 @@
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/css/transacao.css">
         <link rel="stylesheet" href="./assets/css/extrato.css">
+        <link rel="stylesheet" href="./assets/css/rodape.css">
+        <link rel="stylesheet" href="./assets/css/smartphone.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header class="cabecalho">
-            <div class="controle-financeiro">
-                <img  class="logo" src="./assets/img/logo.png" alt="logo">
-                <p id="texto-controle-financeiro">Controle financeiro</p>
-            </div>
-            <div>
-                <ul class="menu">
-                    <li class="limpar-dados">
-                        Limpar dados
-                    </li>
-                    <div class="linha"></div>
-                    <li class="cadastro-de-transacoes">
-                        Cadastro de transações
-                    </li>
+        <header>
+            <nav class="cabecalho">
+                <div class="controle-financeiro">
+                    <img class="logo" src="./assets/img/logo.png" alt="logo" />
+                    <div class="texto-controle-financeiro">
+                      <h4>Controle Financeiro</h4>
+                    </div>
+                  </div>
+                </a>
+                <div class="menu-pequeno"> <a onclick="openSide()">
+                  <img width="18px" height="12px" src="./assets/img/barra.svg"
+                      alt="">
+                </div>
+            <div class="menu">
+                <ul class="conteudo-menu" >
+                  <div class="fechado"><a onclick="closeSide()"><img src="./assets/img/fechar-menu.svg" alt=""></a></div>
+                  <li class="lista1"><a>Cadastro de Transação</a></li>
+                  <li class="lista2">|</li>
+                  <li class="lista3"><a> Limpar Dados</a></li>
+        
                 </ul>
-            </div>
-        </header>
+              </div>
+            </nav>
+          </header>
         <section class="corpo-do-site">
             <form class="acoes">
                 <div class="nova-transacao">
@@ -53,7 +62,7 @@
                         </div>
                     </div>
                     <div class="botao">
-                        <input type="submit" class="botao" value="Adicionar transação">
+                        <input type="submit" class="inpt-botao" value="Adicionar transação">
                     </div>
                 </div>
                 <div class="extrato">
@@ -72,5 +81,6 @@
                 </div>
             </form>
         </section>
+        <footer></footer>
     </body>
 </html>

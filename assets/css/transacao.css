@@ -33,7 +33,7 @@
     padding-left: 6px;
     color: #888;
 }
-.nova-transicao option {
+option {
     font-weight: normal;
     display: block;
     white-space: nowrap;
@@ -67,6 +67,9 @@
     padding-right: 0;
 }
 .botao {
+    width: 100%;
+}
+.inpt-botao {
     margin: 0;
     border: 0;
     width: 100%;

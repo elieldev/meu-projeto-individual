@@ -1,0 +1,119 @@
+@media (max-width: 411px) {
+    .texto-controle-financeiro {
+        width: 80%;
+        text-align: center;
+        padding: 0px;
+     }
+     .Open {
+        transform: translateX(-351px);
+    }
+    .conteudo-menu {
+      overflow-x: hidden;
+      width: 351px;
+      transform: translateX(0px);
+      position: fixed;
+        display: block;
+        padding: 0px;
+        padding-top: 15px;
+        margin: 0px;
+        top: 0;
+        height: 100%;
+        background: #333333;
+        text-align: end;
+        z-index: 3;
+    }
+    .menu-pequeno {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+        z-index: 1;
+        right: 0;
+    }
+    .nova-transacao {
+      border: none;
+    }
+  
+    .titulo-transacao {
+      display: none;
+    }
+  
+    .formulario {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .campo-compra-venda, .nome, .valor, .botao {
+        width: 100%;
+        padding: 0px;   
+    }
+
+    .botao {
+        text-align: end;
+    }
+
+    .acoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inpt-botao {
+        margin-bottom: 27px;
+        width: 100%;
+        padding: 0px;
+        margin-top: 20px;
+    }
+
+    .extrato {
+      border-top: solid #979797 1px;
+    }
+
+    .nova-transacao {
+        display: block;
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .titulo-nome {
+        padding-top: 0px;
+    }
+
+    .extrato {
+        padding: 2px;
+        width: 94%;
+    }
+
+    .controle-financeiro {
+        width: 100%;
+        margin: 0px;
+        padding-left: 22px;
+    }
+    a {
+        color: #fff;
+    }
+    .fechado {
+        width: 100%;
+        text-align: start;
+        position: absolute;
+        display: block;
+    }
+    .conteudo-menu li {
+        display: flex;
+        width: 100%;
+        justify-content: right;
+        align-items: center;
+    }
+    li a {
+        display: flex;
+        height: 32px;
+        padding: 0px 20px 7px 0px;
+        align-items: center;
+    }
+    .conteudo-menu .lista1 {
+        margin-top: 26px;
+    }
+    .conteudo-menu .lista2 {
+        display: none;
+    }
+  }

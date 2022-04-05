@@ -19,14 +19,14 @@ body {
     align-items: center;
     margin-left: 10px;
 }
-.controle-financeiro #texto-controle-financeiro {
+.controle-financeiro .texto-controle-financeiro {
     margin-left: 10px;
 }
 .logo {
     width: 40px;
     height: 40px;
 }
-.menu {
+.conteudo-menu {
     font-size: 16px;
     padding: 0 20px;
     display: flex;
@@ -36,6 +36,7 @@ body {
     margin-right: 10px;
     background-color: white;
     height: 40px;
+    border-radius: 2px;
     
 }
 .limpar-dados {
@@ -50,6 +51,42 @@ body {
     transform: rotate(90deg);
     
 }
+
+.menu-pequeno{
+    text-align: right;
+    display: none;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    list-style: none;
+    height: 40px;
+    border-radius: 2px;
+}
+
+.lista2{
+    color: #979797;
+    width: 20px;
+    display:flex; 
+    justify-content: center;
+}
+
+li {
+    padding: 0;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+}
+.fechado {
+    display: none;
+}
+
 .acoes {
     display: flex;
     justify-content: space-evenly;
