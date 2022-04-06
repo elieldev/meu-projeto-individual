@@ -6,7 +6,7 @@ body {
   .cabecalho {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #E0E0E0;
     width: 100%;
@@ -14,6 +14,7 @@ body {
     font-weight: 600;
   }
   .controle-financeiro {
+    margin-left: 125px;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -27,6 +28,7 @@ body {
     height: 40px;
   }
   .conteudo-menu {
+    margin-right: 125px;
     font-size: 16px;
     padding: 0 20px;
     display: flex;
@@ -42,7 +44,6 @@ body {
     text-align: right;
     display: none;
   }
-  
   ul {
     display: flex;
     align-items: center;
@@ -66,12 +67,9 @@ body {
     color: #333333;
     font-weight: 600;
   }
-  .fechado {
-    display: none;
-  }
   .acoes {
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
     align-items: baseline;
-  }  
+  } 

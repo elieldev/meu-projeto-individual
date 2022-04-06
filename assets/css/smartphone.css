@@ -23,29 +23,63 @@
         text-align: end;
         z-index: 3;
     }
-    .menu-pequeno {
+    /*TESTE*/
+    input[type="checkbox"]
+    {
+        display: none;
+    }
+    label {
+        padding: 15px;
         position: absolute;
+        margin-right: -20px;
+        right: 40px;
+    }
+    .icone {
+        background-color: #333333;
+        width: 350px;
+        height: 100%;
+        right: -350px;
+        position: absolute;
+        transition: all .5s;
+        top: 0px;
+    }
+    input[type="checkbox"]:checked~.icone
+    {
+        transform: translateX(-350px);
+    }
+    .conteudo-icone {
+        list-style: none;
+        top: 26px;
+        position: absolute;
+        width: 80%;
+        margin-top: 10px;
+        background-color: #333333;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    #cadastro-de-transacoes {
+        text-decoration: none;
+        color: white;
         display: block;
-        cursor: pointer;
-        margin-right: 20px;
-        z-index: 1;
-        right: 0;
-    }
-    a {
-        color: #fff;
-    }
-    .conteudo-menu li {
-        display: flex;
-        width: 100%;
-        justify-content: right;
-        align-items: center;
-    }
-    li a {
-        display: flex;
-        height: 32px;
+        text-align: end;
         padding: 0px 20px 7px 0px;
-        align-items: center;
     }
+    #limpar-dados {
+        text-decoration: none;
+        color: white;
+        display: block;
+        text-align: end;
+        padding: 0px 20px 7px 0px;
+    }
+    .conteudo-icone a:hover {
+        background-color: #C4C4C4;
+        color: #333333;
+    }
+    #fechar {
+        padding-right: 270px;
+    }
+    
     .lista1 {
         margin-top: 26px;
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <title>Meu projeto individual</title>
         <meta name= "Author" content= "Eliel">
@@ -24,9 +24,23 @@
                       <h4>Controle Financeiro</h4>
                     </div>
                 </div>
-            <div class="menu-pequeno">
-              <img width="18px" height="12px" src="./assets/img/barra.svg" alt="">
-            </div>
+            <input type="checkbox" id="icone">
+            <label for="icone">
+                <img id="abrir" src="./assets/img/barra.svg" alt="">
+            </label>
+            <nav class="icone">
+                <label for="icone">
+                    <img id="fechar" src="./assets/img/fechar-menu.svg" alt="">
+                </label>
+                <ul class="conteudo-icone">
+                    <li>
+                       <a id="cadastro-de-transacoes" href="">Cadastro de transações</a>
+                    </li>
+                    <li>
+                      <a id="limpar-dados" href="">Limpar dados</a>
+                    </li>
+                </ul>
+            </nav>
             <div class="menu">
                 <ul class="conteudo-menu">
                   <li class="lista1"><a>Cadastro de Transação</a></li>
