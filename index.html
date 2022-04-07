@@ -6,11 +6,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
-        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/cabecalho.css">
         <link rel="stylesheet" href="./assets/css/transacao.css">
         <link rel="stylesheet" href="./assets/css/extrato.css">
         <link rel="stylesheet" href="./assets/css/rodape.css">
-        <link rel="stylesheet" href="./assets/css/smartphone.css">
+        <link rel="stylesheet" href="./assets/css/cabecalho.smartphone.css">
+        <link rel="stylesheet" href="./assets/css/corpo.smartphone.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -24,7 +25,8 @@
                       <h4>Controle Financeiro</h4>
                     </div>
                 </div>
-            <input type="checkbox" id="icone">
+            <div class="menu-pequeno">
+                <input type="checkbox" id="icone">
             <label for="icone">
                 <img id="abrir" src="./assets/img/barra.svg" alt="">
             </label>
@@ -41,13 +43,16 @@
                     </li>
                 </ul>
             </nav>
-            <div class="menu">
-                <ul class="conteudo-menu">
-                  <li class="lista1"><a>Cadastro de Transação</a></li>
-                  <li class="lista2">|</li>
-                  <li class="lista3"><a> Limpar Dados</a></li>
-                </ul>
-              </div>
+            </div>
+            <nav class="menu">
+                <div>
+                    <ul class="conteudo-menu">
+                      <li class="lista1"><a>Cadastro de Transação</a></li>
+                      <li class="lista2">|</li>
+                      <li class="lista3"><a> Limpar Dados</a></li>
+                    </ul>
+                  </div>
+            </nav>
             </nav>
           </header>
         <section class="corpo-do-site">

@@ -2,6 +2,9 @@
     
     /*Cabeçalho*/
 
+    .menu-pequeno {
+        display: block;
+    }
     .texto-controle-financeiro {
         width: 80%;
         text-align: center;
@@ -23,7 +26,7 @@
         text-align: end;
         z-index: 3;
     }
-    /*TESTE*/
+    /*Menu Pequeno*/
     input[type="checkbox"]
     {
         display: none;
@@ -33,15 +36,16 @@
         position: absolute;
         margin-right: -20px;
         right: 40px;
+        top: 20px;
     }
     .icone {
         background-color: #333333;
         width: 350px;
         height: 100%;
-        right: -350px;
         position: absolute;
-        transition: all .5s;
+        right: -350px;
         top: 0px;
+        transition: all 0.5s;
     }
     input[type="checkbox"]:checked~.icone
     {
@@ -49,28 +53,48 @@
     }
     .conteudo-icone {
         list-style: none;
-        top: 26px;
+        top: 40px;
         position: absolute;
-        width: 80%;
-        margin-top: 10px;
+        width: 100%;
+        height: 80px;
         background-color: #333333;
         display: flex;
         align-items: flex-end;
         flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0px;
+    }
+    .conteudo-icone li {
+        display: flex;
+        width: 100%;
+        justify-content: right;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+    }
+    .conteudo-icone li a {
+        display: flex;
+        height: 32px;
+        padding: 0px 20px 7px 0px;
+        align-items: center;
+    }
+    .conteudo-icone a {
+        color: white;
     }
     #cadastro-de-transacoes {
+        display: flex;
         text-decoration: none;
-        color: white;
-        display: block;
+        width: 100%;
         text-align: end;
-        padding: 0px 20px 7px 0px;
+        justify-content: flex-end;
+}
     }
     #limpar-dados {
+        display: flex;
         text-decoration: none;
-        color: white;
-        display: block;
+        width: 100%;
         text-align: end;
-        padding: 0px 20px 7px 0px;
+        justify-content: flex-end;
     }
     .conteudo-icone a:hover {
         background-color: #C4C4C4;
@@ -78,63 +102,5 @@
     }
     #fechar {
         padding-right: 270px;
-    }
-    
-    .lista1 {
-        margin-top: 26px;
-    }
-    .lista2 {
-        display: none;
-    }
-
-    /*Corpo do site*/
-
-    .nova-transacao {
-      border: none;
-    }
-    .titulo-transacao {
-      display: none;
-    }
-    .formulario {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .campo-compra-venda, .nome, .valor, .botao {
-        width: 100%;
-        padding: 0px;   
-    }
-    .botao {
-        text-align: end;
-    }
-    .acoes {
-        flex-direction: column;
-        align-items: center;
-    }
-    .inpt-botao {
-        margin-bottom: 27px;
-        width: 100%;
-        padding: 0px;
-        margin-top: 20px;
-    }
-    .extrato {
-      border-top: solid #979797 1px;
-    }
-    .nova-transacao {
-        display: block;
-        flex-direction: row;
-        width: 90%;
-    }
-    .titulo-nome {
-        padding-top: 0px;
-    }
-    .extrato {
-        padding: 2px;
-        width: 94%;
-    }
-    .controle-financeiro {
-        width: 100%;
-        margin: 0px;
-        padding-left: 22px;
     }
 }
