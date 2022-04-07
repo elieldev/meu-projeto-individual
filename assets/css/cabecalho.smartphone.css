@@ -18,19 +18,7 @@
         margin-right: 50px;
     }
     .conteudo-menu {
-        overflow-x: hidden;
-        width: 351px;
-        transform: translateX(40px);
-        position: fixed;
-        display: block;
-        padding: 0px;
-        padding-top: 15px;
-        margin: 0px;
-        top: 0;
-        height: 100%;
-        background: #333333;
-        text-align: end;
-        z-index: 3;
+        display: none;
     }
     /*Menu Pequeno*/
     input[type="checkbox"]
@@ -42,20 +30,22 @@
         position: absolute;
         margin-right: -20px;
         right: 40px;
-        top: 20px;
+        top: 15px;
     }
     .icone {
+        display: none;
         background-color: #333333;
         width: 350px;
         height: 100%;
         position: absolute;
         right: -350px;
         top: 0px;
-        transition: all 0.5s;
     }
     input[type="checkbox"]:checked~.icone
-    {
+    {   
+        display: block;
         transform: translateX(-350px);
+        
     }
     .conteudo-icone {
         list-style: none;
@@ -108,5 +98,4 @@
     }
     #fechar {
         padding-right: 270px;
-    }
 }
