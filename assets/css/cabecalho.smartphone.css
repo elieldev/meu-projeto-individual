@@ -1,7 +1,13 @@
-@media (max-width: 420px) {
+@media (max-width: 440px) {
     
     /*Cabeçalho*/
 
+    .fundo-cabecalho {
+        display: none;
+    }
+    .cabecalho {
+        position: initial;
+    }
     .menu-pequeno {
         display: block;
     }
@@ -14,7 +20,7 @@
     .conteudo-menu {
         overflow-x: hidden;
         width: 351px;
-        transform: translateX(0px);
+        transform: translateX(40px);
         position: fixed;
         display: block;
         padding: 0px;
