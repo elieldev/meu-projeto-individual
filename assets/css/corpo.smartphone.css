@@ -7,54 +7,54 @@
         border: none;
         width: 34%;
         gap: 20px;
-      }
-      .titulo-transacao {
+    }
+    .titulo-transacao {
         display: none;
-      }
-      .formulario {
+    }
+    .formulario {
         display: block;
-      }
-      .nome, .valor, .botao {
-          width: 100%;
-          padding-top: 20px;
-      }
-      .campo-compra-venda {
-          width: 100%;
-          padding: 0px;
-      }
-      .botao {
-          text-align: end;
-          margin: 0px;
-      }
-      .acoes {
-          margin-top: 10px;
-          flex-direction: column;
-          align-items: center;
-      }
-      .inpt-botao {
-          margin-bottom: 27px;
-          width: 100%;
-          padding: 0px;
-          margin-top: 20px;
-      }
-      .extrato {
+    }
+    .nome, .valor, .botao {
+        width: 100%;
+        padding-top: 20px;
+    }
+    .campo-compra-venda {
+        width: 100%;
+        padding: 0px;
+    }
+    .botao {
+        text-align: end;
+        margin: 0px;
+    }
+    .acoes {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inpt-botao {
+        margin-bottom: 27px;
+        width: 100%;
+        padding: 0px;
+        margin-top: 20px;
+    }
+    .extrato {
         border-top: solid #979797 1px;
-      }
-      .nova-transacao {
-          display: block;
-          flex-direction: row;
-          width: 90%;
-      }
-      .titulo-nome {
-          padding-top: 0px;
-      }
-      .extrato {
-          padding: 2px;
-          width: 94%;
-      }
-      .controle-financeiro {
-          width: 100%;
-          margin: 0px;
-          padding-left: 22px;
-      }
+    }
+    .nova-transacao {
+        display: block;
+        flex-direction: row;
+        width: 90%;
+    }
+    .titulo-nome {
+        padding-top: 0px;
+    }
+    .extrato {
+        padding: 2px;
+        width: 94%;
+    }
+    .controle-financeiro {
+        width: 100%;
+        margin: 0px;
+        padding-left: 22px;
+    }
 }
