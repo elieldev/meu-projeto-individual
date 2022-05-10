@@ -1,3 +1,4 @@
+/*Transação*/
 .nova-transacao {
     display: flex;
     flex-direction: column;
@@ -80,4 +81,49 @@ option {
     font-weight: 400;
     border-radius: 4px;
     cursor: pointer;
+}
+footer {
+    width: 100%;
+    border: 5px solid #333;
+    position: fixed;
+    bottom: 0;
+}
+/*Extrato*/
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+.extrato {
+    width: 60%;
+}
+.titulo-extrato {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+}
+td {
+    border-bottom: solid #979797 1px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 25px;
+    color: #000000;
+}
+.extrato-mercadoria {
+    font-weight: 700;
+    padding-left: 22px;
+    padding-top: 2px;
+}
+.extrato-valor {
+    font-weight: 700;
+    padding-right: 22px;
+    text-align: start;
+}
+.extrato-transacoes {
+    border: none;
+    text-align: center;
+    width: 100%;
+    padding-left: 60px;
+}
+h2 {
+    text-align: center;
 }
