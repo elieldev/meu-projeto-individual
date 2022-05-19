@@ -29,6 +29,7 @@ function desenhaTabela() {
                 </td>
             </tr>`};
 }
+
 function limparDados(p) {
     
     if (
