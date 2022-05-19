@@ -65,6 +65,16 @@
         text-align: end;
         justify-content: flex-end;
    }
+   #limpar-dados {
+        display: flex;
+        text-decoration: none;
+        width: 100%;
+        text-align: end;
+        justify-content: flex-end;
+   }
+   a:hover {
+    background-color: #E0E0E0;
+  }
 }
 input[type="checkbox"] {
     display: none;
@@ -110,6 +120,7 @@ input[type="checkbox"]:checked~.icone {
     text-decoration: none;
     color: white;
 }
+
 .conteudo-icone li a {
     display: flex;
     height: 32px;
@@ -118,4 +129,7 @@ input[type="checkbox"]:checked~.icone {
 }
 .conteudo-icone a {
     color: white;
+}
+.conteudo-icone a:hover {
+    color: #333333;
 }

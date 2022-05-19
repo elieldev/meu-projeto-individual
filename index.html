@@ -34,10 +34,10 @@
                 </label>
                 <ul class="conteudo-icone">
                     <li>
-                       <a id="cadastro-de-transacoes" href="">Cadastro de transações</a>
+                       <a id="cadastro-de-transacoes" href="#" onclick="window.location.href = ''">Cadastro de transações</a>
                     </li>
                     <li>
-                      <a id="limpar-dados" href="">Limpar dados</a>
+                      <a id="limpar-dados" href="#" onclick="limparDados('${dados}')">Limpar dados</a>
                     </li>
                 </ul>
             </nav>
@@ -45,9 +45,9 @@
             <nav class="menu">
                 <div>
                     <ul class="conteudo-menu">
-                      <li class="lista1"><a>Cadastro de Transação</a></li>
+                      <li class="lista1"><a onclick="cadastroTransacoes()">Cadastro de Transação</a></li>
                       <li class="lista2">|</li>
-                      <li class="lista3"><a> Limpar Dados</a></li>
+                      <li class="lista3"><a onclick="limparDados('${dados}')">Limpar dados</a></li>
                     </ul>
                   </div>
             </nav>
@@ -55,24 +55,24 @@
             <div class="fundo-cabecalho"></div>
           </header>
         <section class="corpo-do-site">
-            <form class="acoes">
+            <form onsubmit="testaForm(event)" class="acoes">
                 <div class="nova-transacao">
                     <h1 class="titulo-transacao">Nova transação</h1>
                     <div class="formulario">
                         <div class="campo-compra-venda">
                             <h4 class="transacao">Tipo de transação</h4>
-                            <select required id="compra-venda">
-                                <option value="Compra">Compra</option>
-                                <option value="Venda">Venda</option>
+                            <select id="compra-venda">
+                                <option value="compra">Compra</option>
+                                <option value="venda">Venda</option>
                               </select>
                         </div>
                         <div class="nome">
                             <h4 class="titulo-nome">Nome da mercadoria</h4>
-                            <input required id="inpt-nome" type="text" placeholder="Input">
+                            <input required id="inpt-nome" type="text" placeholder="Nome">
                         </div>
                         <div class="valor">
                             <h4 class="titulo-valor">Valor</h4>
-                            <input required id="inpt-valor" type="text" placeholder="R$ 0,00">
+                            <input required id="inpt-valor" type="text" placeholder="R$ 0,00" onKeyPress="return(formatarMoeda(this,'.',',',event))" onfocus="this.value = ''">
                         </div>
                     </div>
                     <div class="botao">
@@ -81,20 +81,19 @@
                 </div>
                 <div class="extrato">
                     <h2 class="titulo-extrato">Extrato de Transações</h2>
-                    <table id="tabela-extrato">
-                        <tbody>
+                    <table class="tabela-extrato" id="tabela-extrato">
+                        <tbody id="tbody">
                             <tr>
                                 <td class="extrato-mercadoria">Mercadoria</td>
                                 <td class="extrato-valor">Valor</td>
-                              </tr>
-                            <tr class="listagem-transacoes">
-                                <td class="extrato-transacoes">Nenhuma Transação cadastrada</td>
                             </tr>
                         </tbody>
+                        <tfoot id="tfoot"></tfoot>
                     </table>
                 </div>
             </form>
         </section>
         <footer></footer>
+        <script src="./assets/js/scritpt.js"></script>
     </body>
 </html>

@@ -38,6 +38,9 @@ body {
   justify-content: center;
   width: max-content;
 }
+.conteudo-menu li a:hover {
+  color: red;
+}
 .menu-pequeno{
   display: none;
 }
