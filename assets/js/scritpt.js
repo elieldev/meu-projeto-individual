@@ -5,7 +5,65 @@ if (extratoRaw != null) {
     var extrato = [];
 }
 
+const formatMoney = new Intl.NumberFormat("pt-br", {
+    style: "currency",
+    currency: "BRL",
+    minimumFractionDigits: 2,
+});
+
 function desenhaTabela() {
+
+    let total = 0;
+    
+    linhasExistentes = [...document.querySelectorAll('table.tabela-extrato tbody .conteudo-dinamico')];
+    linhasExistentes.forEach((element) => {
+        element.remove()
+    });
+
+    if (extrato.length == 0) {
+        document.querySelector('table.tabela-extrato tbody').innerHTML +=
+        `<tr class="conteudo-dinamico">  
+            <td style="border:none; text-align:center; width:100%; padding-left:60px">Nenhuma Transação cadastrada</td> 
+        </tr>`;
+      }
+    
+    for (dados in extrato) {
+        
+        let valor = parseFloat(extrato[dados].valor.replace(/[^0-9]/g, ""));
+        
+    if (extrato[dados].compraVenda == "compra") {
+        total -= valor;
+    } else {
+        total += valor;
+    }
+
+    document.querySelector('table.tabela-extrato tbody').innerHTML += `
+        <tr class="conteudo-dinamico">
+            <td class="nome-mercadoria">${ (extrato[dados].compraVenda ? '-' : '+')} &nbsp; ${extrato[dados].nome}</td>
+            <td class="preco-mercadoria">R$ ${extrato[dados].valor}</td>
+        </tr>`};
+    
+    if (extrato.length > 0) {
+      
+    document.querySelector('table.tabela-extrato tbody').innerHTML += ` 
+        <tr class="conteudo-dinamico"> 
+            <td> </td> <td> </td>  
+        </tr>
+        <tr class="conteudo-dinamico">
+            <td class="total-texto"><strong>Total</strong></td>
+            <td class="total-valor">${formatMoney.format(total.toString().replace(/([0-9]{2})$/g, ".$1"))}</td>
+        </tr> 
+        <tr class="conteudo-dinamico"> 
+            <td style="border:none;"> </td> 
+            <td  class="despesa-lucro">${extrato[dados].compraVenda ? "[Despesa]" : "[Lucro]"} 
+            </td> 
+        </tr>`;
+    }
+}
+/* function desenhaTabela() {
+
+    let total = 0;
+
     linhasExistentes = [...document.querySelectorAll('table.tabela-extrato tbody .conteudo-dinamico')];
     linhasExistentes.forEach((element) => {
         element.remove()
@@ -28,7 +86,7 @@ function desenhaTabela() {
                     R$ ${extrato[dados].valor}
                 </td>
             </tr>`};
-}
+}  */
 
 function limparDados(p) {
     
@@ -43,9 +101,9 @@ function limparDados(p) {
           desenhaTabela();
         }
       } else if (extrato <= 0) {
-        alert("Não foi possivel limpar os dados pois não há transações no extrato..");
+        alert("Não foi possível limpar os dados pois não há transações no extrato..");
       }
-}
+} 
 
 function testaForm(e) {
     e.preventDefault();

@@ -139,24 +139,18 @@ td {
 h2 {
     text-align: center;
 }
-.total {
-    font-weight: 600;
-}
-.lucro-prejuizo {
-    text-align:end;
-}
-.vazio-lp {
-    border:none;
-    padding: 0px 0px 35px 10px;
-}
-.resultado-valor {
-    border:none;
-    padding: 0px 0px 35px 10px;
-}
 .total-texto {
-    padding-left: 25px;
-    border: none;
+    padding-left:25px;
+    border:none;
 }
 .total-valor {
-    border: none;
+    border:none; 
+    font-weight:600; 
+    text-align:end; 
+    padding-bottom:0px;
+}
+.despesa-lucro {
+    border:none; 
+    padding: 0px 0px 35px 10px;
+    text-align:end;
 }
