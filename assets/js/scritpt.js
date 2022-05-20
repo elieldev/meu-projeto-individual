@@ -17,7 +17,6 @@ inputValor.addEventListener("paste", function(x){
     x.preventDefault()
 });
 
-//Função tabela
 function desenhaTabela() {
 
     let total = 0;
