@@ -5,10 +5,16 @@ if (extratoRaw != null) {
     var extrato = [];
 }
 
-const formatMoney = new Intl.NumberFormat("pt-br", {
+const formatarMoedaTotal = new Intl.NumberFormat("pt-br", {
     style: "currency",
     currency: "BRL",
     minimumFractionDigits: 2,
+});
+
+//Impede o usuário de colar algo no campo valor.
+const inputValor = document.querySelector("#inpt-valor");
+inputValor.addEventListener("paste", function(x){
+    x.preventDefault()
 });
 
 function desenhaTabela() {
@@ -31,7 +37,7 @@ function desenhaTabela() {
         
         let valor = parseFloat(extrato[dados].valor.replace(/[^0-9]/g, ""));
         
-    if (extrato[dados].compraVenda == "compra") {
+    if (extrato[dados].compraVenda) {
         total -= valor;
     } else {
         total += valor;
@@ -45,62 +51,42 @@ function desenhaTabela() {
     
     if (extrato.length > 0) {
       
-    document.querySelector('table.tabela-extrato tbody').innerHTML += ` 
-        <tr class="conteudo-dinamico"> 
-            <td> </td> <td> </td>  
-        </tr>
-        <tr class="conteudo-dinamico">
-            <td class="total-texto"><strong>Total</strong></td>
-            <td class="total-valor">${formatMoney.format(total.toString().replace(/([0-9]{2})$/g, ".$1"))}</td>
-        </tr> 
-        <tr class="conteudo-dinamico"> 
-            <td style="border:none;"> </td> 
-            <td  class="despesa-lucro">${extrato[dados].compraVenda ? "[Despesa]" : "[Lucro]"} 
-            </td> 
-        </tr>`;
+        document.querySelector('table.tabela-extrato tbody').innerHTML += ` 
+            <tr class="conteudo-dinamico"> 
+                <td> </td> <td> </td>  
+            </tr>
+            <tr class="conteudo-dinamico">
+                <td class="total-texto"><strong>Total</strong></td>
+                <td class="total-valor">${formatarMoedaTotal.format(total.toString().replace(/([0-9]{2})$/g, ".$1"))}</td>
+            </tr>`;
+
+        if (total > 0) {
+            document.querySelector('table.tabela-extrato tbody').innerHTML += `
+                <tr class="conteudo-dinamico"> 
+                    <td style="border:none;"> </td> 
+                    <td  class="despesa-lucro">[Lucro]</td> 
+                </tr>`
+        } else {
+            document.querySelector('table.tabela-extrato tbody').innerHTML += `
+                <tr class="conteudo-dinamico"> 
+                    <td style="border:none;"> </td> 
+                    <td  class="despesa-lucro">[Despesa]</td> 
+                </tr>`
+        }
+
     }
 }
-/* function desenhaTabela() {
-
-    let total = 0;
-
-    linhasExistentes = [...document.querySelectorAll('table.tabela-extrato tbody .conteudo-dinamico')];
-    linhasExistentes.forEach((element) => {
-        element.remove()
-    });
-
-    if (extrato.length == 0) {
-        document.querySelector('table.tabela-extrato tbody').innerHTML +=
-        `<tr class="conteudo-dinamico">  
-            <td style="border:none; text-align:center; width:100%; padding-left:60px">Nenhuma Transação cadastrada</td> 
-        </tr>`;
-      }
-
-    for (dados in extrato) {
-        document.querySelector('table.tabela-extrato tbody').innerHTML += `
-            <tr class="conteudo-dinamico">
-                <td class="nome-mercadoria">
-                    ${ (extrato[dados].compraVenda ? '-' : '+')} &nbsp; ${extrato[dados].nome}
-                </td>
-                <td class="preco-mercadoria">
-                    R$ ${extrato[dados].valor}
-                </td>
-            </tr>`};
-}  */
 
 function limparDados(p) {
     
-    if (
-        extrato.length > 0 &&
-        window.confirm("Deseja remover todas as informações?")
-      ) {
+    if (extrato.length > 0 && window.confirm("Deseja remover todas as informações?")) {
         for (element of document.querySelectorAll(".conteudo-dinamico")) {
           element.remove();
           localStorage.clear();
           extrato = [];
           desenhaTabela();
         }
-      } else if (extrato <= 0) {
+    } else if (extrato <= 0) {
         alert("Não foi possível limpar os dados pois não há transações no extrato..");
       }
 } 
@@ -109,6 +95,7 @@ function testaForm(e) {
     e.preventDefault();
     
     var extratoRaw = localStorage.getItem('extrato')
+
     if (extratoRaw != null) {
         var extrato = JSON.parse(extratoRaw)
     } else {
@@ -129,6 +116,7 @@ function cadastroTransacoes() {
     document.getElementById("compra-venda").focus();
 } 
 
+//Máscara para formatar a moeda ao digitar no input. Máscara retirada do código de um aluno que já fez o projeto; https://github.com/EdiJunior88/NewTab_Academy_Projeto_Individual_JavaScript/blob/main/javascript/index.js
 function formatarMoeda(objTextBox, SeparadorMilesimo, SeparadorDecimal, e){  
     var sep = 0;  
     var key = '';  

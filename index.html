@@ -68,11 +68,11 @@
                         </div>
                         <div class="nome">
                             <h4 class="titulo-nome">Nome da mercadoria</h4>
-                            <input required id="inpt-nome" type="text" placeholder="Nome">
+                            <input required id="inpt-nome" type="text" placeholder="Nome" autocomplete="off">
                         </div>
                         <div class="valor">
                             <h4 class="titulo-valor">Valor</h4>
-                            <input required id="inpt-valor" type="text" placeholder="R$ 0,00" onKeyPress="return(formatarMoeda(this,'.',',',event))" onfocus="this.value = ''">
+                            <input required id="inpt-valor" type="text" placeholder="R$ 0,00" autocomplete="off" onKeyPress="return(formatarMoeda(this,'.',',',event))" onfocus="this.value = ''">
                         </div>
                     </div>
                     <div class="botao">
