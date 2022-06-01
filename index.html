@@ -13,6 +13,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+        <script src="https://plentz.github.io/jquery-maskmoney/javascripts/jquery.maskMoney.min.js" type="text/javascript"></script>
     </head>
     <body>
         <header>
@@ -37,7 +39,7 @@
                        <a id="cadastro-de-transacoes" href="#" onclick="window.location.href = ''">Cadastro de transações</a>
                     </li>
                     <li>
-                      <a id="limpar-dados" href="#" onclick="limparDados('${dados}')">Limpar dados</a>
+                      <a id="limpar-dados" href="#" onclick="limparDados()">Limpar dados</a>
                     </li>
                 </ul>
             </nav>
@@ -47,7 +49,7 @@
                     <ul class="conteudo-menu">
                       <li class="lista1"><a onclick="cadastroTransacoes()">Cadastro de Transação</a></li>
                       <li class="lista2">|</li>
-                      <li class="lista3"><a onclick="limparDados('${dados}')">Limpar dados</a></li>
+                      <li class="lista3"><a onclick="limparDados()">Limpar dados</a></li>
                     </ul>
                   </div>
             </nav>
@@ -68,11 +70,11 @@
                         </div>
                         <div class="nome">
                             <h4 class="titulo-nome">Nome da mercadoria</h4>
-                            <input required id="inpt-nome" type="text" placeholder="Nome" autocomplete="off">
+                            <input required id="inpt-nome" type="text" placeholder="Nome" autocomplete="off" onfocus="this.value = ''" maxlength="59">
                         </div>
                         <div class="valor">
                             <h4 class="titulo-valor">Valor</h4>
-                            <input required id="inpt-valor" type="text" placeholder="R$ 0,00" autocomplete="off" onKeyPress="return(formatarMoeda(this,'.',',',event))" onfocus="this.value = ''">
+                            <input required id="inpt-valor" type="text" placeholder="R$ 0,00" autocomplete="off" onfocus="this.value = ''" maxlength="22">
                         </div>
                     </div>
                     <div class="botao">
@@ -95,5 +97,15 @@
         </section>
         <footer></footer>
         <script src="./assets/js/scritpt.js"></script>
+        <script>
+            jQuery(function() {
+                
+                jQuery("#inpt-valor").maskMoney({
+                prefix:'R$ ', 
+                thousands:'.', 
+                decimal:','
+                })
+            });
+        </script>
     </body>
 </html>

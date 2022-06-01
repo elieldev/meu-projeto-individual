@@ -26,7 +26,7 @@ body {
   align-items: center;
 }
 .controle-financeiro .texto-controle-financeiro {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .logo {
   width: 40px;
@@ -66,6 +66,7 @@ a {
   text-decoration: none;
   color: #333333;
   font-weight: 600;
+  cursor: pointer;
 }
 .acoes {
   max-width: 1100px;

@@ -53,12 +53,14 @@ option {
     color: #888888;
     padding-left: 6px;
     padding-right: 0;
+    outline: none;
+    border: solid 2px;
 }
 .valor {
     padding-top: 20px;
 }
 #inpt-valor {
-    margin: 0;
+    margin: 0px;
     width: 97%;
     cursor: pointer;
     height: 32px;
@@ -66,6 +68,8 @@ option {
     color: #888888;
     padding-left: 6px;
     padding-right: 0;
+    outline: none;
+    border: solid 2px;
 }
 .botao {
     width: 100%;
